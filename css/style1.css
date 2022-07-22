@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+
+*{
+	scroll-behavior: smooth;
+}
+
+:root{
+	/*hue-staturation-lightness-alpha*/
+	--primary-color:hsl(330 , 87%, 17%);
+	--secondary-color: hsla(203, 100%, 13%, 1);
+}
+
+
+
+body{
+	font-family: font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+}
+
+.btn-bott{
+	background: var(--primary-color);
+	padding: 10px;
+	color: #fff;
+	border-radius: 10px;
+
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+
+	z-index: 110;
+}
+
+
+/*Start Header*/
+
+header{
+	height: 100vh;
+	background: linear-gradient(
+		30deg,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.5)
+	),url('../assets/img/banner/banner2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	background-attachment: fixed;
+
+	position: relative;
+}
+
+/*Start nav bar*/
+
+.navbar{
+	background: linear-gradient(rgba(0, 0, 0, 0.3),var(--secondary-color));
+	padding: 20px 30px;
+
+	transition: all .5s;
+}
+
+.navmenus{
+	background: linear-gradient(rgba(0, 0, 0, 0.6),var(--secondary-color));
+	padding: 5px 30px;
+}
+
+.menuitems{
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+.menuitems:hover{
+	color: #0a9ca3;
+}
+
+.lines1,.lines2,.lines3{
+	width: 25px;
+	height: 3px;
+	margin: 6px;
+
+	transition: all 0.5s;
+}
+
+.crossxs .lines1{
+   transform: rotate(-45deg) translate(-6px,6px);  /*margin ko lan sho*/
+}
+
+.crossxs .lines2{
+	opacity: 0;
+}
+
+.crossxs .lines3{
+   transform: rotate(45deg) translate(-6px,-6px);
+}
+
+
+/*End nav bar*/
+
+/*Start banner*/
+
+.banners{
+	width: 80%;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%,-50%);
+}
+
+.bannerheaders{
+	animation-name: bananni;
+	animation-duration: 2s;
+}
+
+.bannerparagraphs{
+	animation-name: bananni;
+	animation-duration: 2s;
+	animation-delay: 1s;
+
+	animation-fill-mode: backwards;       /*a nout ka pyan khaw dar*/
+}
+
+@keyframes bananni{
+	0%{ 
+		transform:translateX(-100px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+/*End banner*/
+
+/*End Header*/
+
+/*Start About Us*/
+
+ .aboutuss{
+ 	background-image: linear-gradient(
+		30deg,
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.3)
+	),url('../assets/img/banner/banner2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+
+	position: relative;
+ }
+
+ .aboutuss .lines{
+ 	width: 30%;
+ 	height: 1.2px;
+ 	background: #fff;
+ 	margin-bottom: 3px;
+ }
+
+ .aboutuss .lines:nth-of-type(2){
+ 	width: 20%;
+ 	height: 1px;
+ }
+
+ .aboutuss .lines:nth-of-type(3){
+ 	width: 10%;
+ 	height: 0.5px;
+ 	margin-bottom: 20px;
+ }
+
+ .aboutuss h5{
+   background: #fff;
+   color: #000;
+   border-left: 5px solid red;
+   padding: 10px;
+ }
+
+ .aboutuss h5 ~ p{    /* h5 htal ka ma p ko lan kaw lite dal ta baw*/
+ 	text-align: left;
+ 	margin: 30px 0;
+ }
+
+ .aboutuss img{
+ 	width: 350px;
+
+ 	position: absolute;
+ 	bottom: 0;
+ }
+
+ @media(max-width: 768px){
+    
+ .aboutuss img{
+ 	width: 150px;
+
+ 	position: absolute;
+ 	bottom: 0;
+ }
+ }
+
+/*End About Us*/
+
+
+.titles{
+	color: var(--primary-color);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	/*background: green;*/
+	display: inline-block;
+	padding: 5px 20px;
+
+	position: relative;
+}
+
+.titles::before,.titles::after{
+	content: "";
+	width: 20px;
+	height: 20px;
+
+	position: absolute;
+	
+}
+
+.titles::before{
+	top: 0;
+	left: 0;
+
+	border-top: 3px solid var(--primary-color);
+	border-left: 3px solid var(--primary-color);
+}
+
+.titles::after{
+	right: 0;
+	bottom: 0;
+
+	border-right: 3px solid var(--primary-color);
+	border-bottom: 3px solid var(--primary-color);
+}
+
+.list-inline-item{
+	cursor: pointer;
+	color: #777;
+}
+
+.activeitems{
+	color: var(--secondary-color);
+}
+
+	.img0 img{
+		width: 200px;
+	}
+
+@media(max-width: 768px){
+	.col .listprop{
+		margin-right: 2px;
+		font-size:9px;
+	}
+
+
+	.img0 img{
+		width: 80px;
+	}
+
+
+}
+
+.mission{
+	background: var(--secondary-color);
+}
+
+.mission img{
+	width: 450px;
+	text-align: center;
+}
+
+@media(max-width: 768px){
+	.mission img{
+	width: 300px;
+	margin-right: 30px;
+}
+
+}
+
+.left{
+	animation-name: left;
+	animation-duration: 3s;
+}
+
+
+
+
+@keyframes left{
+	0%{
+     transform: translateX(-150%);
+     opacity: 0;
+	}
+	100%{
+      transform: translateX(0%);
+      opacity: 1;
+	}
+}
+
+.right{
+	animation-name: right;
+	animation-duration: 3s;
+}
+
+@keyframes right{
+	0%{
+     transform: translateX(50%);
+     opacity: 0;
+	}
+	100%{
+     transform: translateX(0%);
+     opacity: 1;
+	}
+}
+
+.advise{
+	background: linear-gradient(
+		200deg,
+   var(--primary-color),
+   var(--secondary-color)
+	);
+}
+
+.service{
+	overflow: hidden;
+	position: relative;
+	white-space: pre-wrap;
+}
+
+.service::before{
+	content: "You may need our servece ? \A Try and upgrade your living environment. \A \f004  \f004  \f004";
+	font-family: "Font Awesome 5 Free";
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	color: #fff;
+
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 2;
+
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+
+  	z-index: 1;
+}
+
+.service:hover::before{
+	content: "";
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.servicecard{
+	transition: all .5s;
+}
+
+
+.service:hover .servicecard{
+	transform: scale(1.2);
+}
+
+.servicetext{
+	width: 40%;
+	background: rgba(0, 0, 0, 0.7);
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: #fff;
+	opacity: 0.7;
+
+	position: absolute;
+	bottom: 20%;
+	right: 0%;
+}
+
+ul.clientlist{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+   
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.clientlist li{
+	background: #f4f4f4;
+	border: 3px solid #e9e9e9;
+	padding:20px 30px;
+	margin: auto;
+	transition: all .5s;
+}
+
+.clientlist li:hover{
+	border-color:  var(--secondary-color);
+	box-shadow: 5px -3px 0 rgba(0, 0, 0, 0.7);
+}
+
+ul.clientlist img{
+	width: 100px;
+}
+
+@media(max-width:768px){
+
+	.clientlist li{
+	background: #f4f4f4;
+	border: 3px solid #e9e9e9;
+	padding:5px 15px;
+	margin: auto;
+	transition: all .3s;
+}
+
+.clientlist li:hover{
+	border-color:  var(--secondary-color);
+	box-shadow: 3px -2px 0 rgba(0, 0, 0, 0.7);
+}
+
+ul.clientlist img{
+	width: 75px;
+}
+
+}
+
+
+.feedback{
+	background: linear-gradient(
+   rgba(0, 0, 0, 0),
+   rgba(0, 0, 0, 0.7)
+	),url('../assets/img/banner/banner3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.quo{
+	background: var(--secondary-color);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	justify-content: space-between;
+	padding: 20px 25px;
+	margin: -25px;
+}
+
+.quoh{
+	display: flex;
+}
+
+.quo .btn-phones{
+	display: block;
+	width: 150px;
+	height: 50px;
+	border-radius: 100px;
+	line-height: 50px;
+	text-align: center;
+	padding: 0;
+	border: 0;
+	background: var(--primary-color);
+	color: #fff;
+	transform: translateX(-1px);
+	
+}
+
+.btn-phones:hover{
+	transform: translateX(0);
+	box-shadow: 3px 5px 5px #444;
+}
+
+@media(max-width: 768px){
+	.phoneicon{
+		width: 40px;
+		margin-top: 20px;
+	}
+}
+
+.funicons img{
+	width: 70px;
+}
+
+.funicons div:nth-of-type(even){
+	background: #f0f0f0;
+}
+
+.contact{
+	background: linear-gradient(
+		100deg,
+   rgba(0, 0, 0, 0.7) 50%,
+   rgba(0, 0, 0, 0.1) 30%,
+   transparent 70%
+	),url('../assets/img/banner/banner3.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.contact .ips{
+	background: transparent;
+	border-color: transparent;
+	border-bottom: 3px solid #fff;
+
+
+}
+
+.contact .ips:focus{
+	box-shadow: none;
+	color: #fff;
+	border-bottom: 3px solid var(--primary-color);
+}
+
+.contact .btnsub{
+	background: var(--secondary-color);
+	border: none;
+	letter-spacing: 1px;
+	transition: all 0.5s;
+}
+
+.contact .btnsub:hover{
+	background: var(--primary-color);
+}
+
+.contact .labels{
+		color: #e2e2e2;
+  	display: block;
+  	margin-top: -65px;
+  	margin-left: 10px;
+
+  	transition: all .5s;
+	
+}
+
+.ips:placeholder-shown + .labels{    /*placeholder shi nay ta yway*//* + singn is general sibling selector*/
+  	opacity: 0;
+  	/*visibility: hidden;*/
+  	transform: translateY(80px);
+  }
+
+  .lif{
+  	text-decoration: none;
+  	color: #fff;
+  	font-size: 14px;
+
+  	transition: all .5s;
+  }
+
+  .lif:hover{
+  	color: orange;
+  	border-bottom: 2px solid orange;
+  	letter-spacing: 1px;
+  }
+
